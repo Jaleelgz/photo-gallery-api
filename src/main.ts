@@ -22,6 +22,7 @@ async function bootstrap() {
   // Initialize the firebase admin app
   admin.initializeApp({
     credential: admin.credential.cert(adminConfig),
+    storageBucket: process.env.BUCKET_URL,
   });
 
   const config = new DocumentBuilder()
